@@ -1,0 +1,13 @@
+.show-for-mobile {
+    // when the browser is above the minimum width of 45rem hide this:
+    @media (min-width: $desktop-breakpoint) {
+        display: none;
+    }
+}
+
+.show-for-desktop {
+    // substracting .01rem to make sure we avoid having the breakpoint above and this happening at the same time.
+    @media (max-width: $desktop-breakpoint - .01rem) {
+        display: none;
+    }
+}

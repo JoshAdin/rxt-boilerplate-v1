@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    // We want to work with rems and most browsers convert 1rem to 16px by default.
+    // 1rem = 16px
+    // 1px = 0.0625rem
+
+    // 16px * .625 = 10 -> now working with rem in base 10
+    font-size: 62.5%; // base font size
+
+    // Note: I dont think this base font-size calculation has an effect on media query. For example 45rem = 45 * 16 = 720px; And not 450px.
+}
+
+body {
+    color: $dark-grey;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+button {
+    cursor: pointer;
+
+    &:disabled {
+        cursor: default;
+    }
+}
+
+.is-active {
+    font-weight: bold;
+}
